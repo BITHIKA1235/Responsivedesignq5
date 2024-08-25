@@ -1,0 +1,71 @@
+/* Basic reset for margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container styling */
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Header styling */
+  .header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Main content styling */
+  .main-content {
+    flex: 1; /* Take up available space */
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    gap: 15px; /* Space between columns */
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    background-color: #f4f4f4;
+    padding: 15px;
+    flex: 1; /* Flex item takes up equal space */
+  }
+  
+  /* Main content area styling */
+  .content {
+    background-color: #e0e0e0;
+    padding: 15px;
+    flex: 2; /* Main content takes up more space */
+  }
+  
+  /* Footer styling */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  /* Media query for screens smaller than 768px */
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column; /* Stack sidebar and content vertically */
+    }
+  }
+  
+  /* Media query for screens smaller than 500px */
+  @media (max-width: 500px) {
+    .header, .footer {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .sidebar, .content {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  }
+  
